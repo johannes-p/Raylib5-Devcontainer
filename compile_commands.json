@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/x86_64-linux-gnu-g++-10",
+      "-c",
+      "-DRAYLIB_STATIC",
+      "-I/usr/local/include",
+      "-I/workspaces/cpp/raylib/src",
+      "-I/workspaces/cpp/MCIGraph_lib-main",
+      "-std=c++17",
+      "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.cpp",
+      "-o",
+      "/workspaces/cpp/build/mandelbrot.out"
+    ],
+    "directory": "/workspaces/cpp",
+    "file": "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.cpp",
+    "output": "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.o"
+  }
+]

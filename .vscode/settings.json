@@ -1,0 +1,10 @@
+{
+    "cmake.sourceDirectory": "/workspaces/cpp/raylib",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "-log=verbose",
+        "-pretty",
+        "--background-index",
+        "--compile-commands-dir=./vscode"
+    ]
+}

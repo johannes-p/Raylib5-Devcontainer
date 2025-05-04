@@ -1,0 +1,30 @@
+// ────────────────────────────────────────────────────────────────────────────
+//   © 2025 johannes-p <https://github.com/johannes-p> — All rights reserved.
+//
+//   License: This file is part of a project licensed under the
+//            GNU Affero General Public License v3.0 (AGPLv3).
+//
+//            You must retain this notice. See the LICENSE file or visit:
+//            https://www.gnu.org/licenses/agpl-3.0.html
+// ────────────────────────────────────────────────────────────────────────────
+{
+	"name": "C++ with Raylib 5.0",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"llvm-vs-code-extensions.vscode-clangd",
+				"usernamehw.errorlens"
+			]
+		}
+	},
+	"postCreateCommand": "sudo apt update && sudo apt install -y build-essential git && sudo apt install -y libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev && rm -rf raylib && git clone https://github.com/raysan5/raylib.git raylib && cd raylib && git checkout tags/5.0 -b raylib-5.0 && cd src/ && make PLATFORM=PLATFORM_DESKTOP && sudo make install"
+}
