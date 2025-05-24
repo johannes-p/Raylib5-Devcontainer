@@ -6,5 +6,6 @@
         "-pretty",
         "--background-index",
         "--compile-commands-dir=./vscode"
-    ]
+    ],
+    "cmake.ignoreCMakeListsMissing": true
 }

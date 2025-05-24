@@ -40,7 +40,7 @@ I built this in my free time because every student deserves a modern, intuitive 
 	    
     VS Code will open and prompt you to install the "Dev Containers"-Extension followed by a prompt to reopen the folder in a DevContainer. Click **“Reopen in Container”** and let it do its thing. This might take a minute the first time as Docker sets everything up.  
 	    
-    > [!NOTE]  
+> [!NOTE]  
     Once inside the container, you're in a fully isolated dev environment with all tools preconfigured.  
 	    
 ---
@@ -72,7 +72,39 @@ I built this in my free time because every student deserves a modern, intuitive 
 ---  
 ### 🎉 You’re Ready!  
 Once everything is set up, you can compile, run, and debug your projects right from inside the container.
-  
+
+---
+
+### 🐞 Troubleshooting
+
+* #### GLFW Error: Missing DISPLAY Variable
+
+  If you encounter the following error when trying to run your program inside the DevContainer:
+
+  ```
+  WARNING: GLFW: ERROR: 65550 Description: X11: The DISPLAY environment variable is missing
+  WARNING: GLFW: Failed to initialize GLFW
+  ```
+
+  This usually happens due to issues with the WSL2 integration and the container's display environment.
+
+  Run the following command *outside* of VS Code in a regular Windows Command Prompt or PowerShell to uninstall the problematic Docker Desktop WSL integration:
+
+  ```
+  wslconfig /u docker-desktop
+  ```
+
+  Then restart Docker Desktop and reopen your DevContainer.
+
+---
+
+### ⚠️ Known Limitations
+
+While this DevContainer setup brings many benefits like consistency and modern tooling, there are some trade-offs to keep in mind:
+
+- #### Performance
+
+  There is noticeable latency and sluggishness when running Raylib programs inside the container compared to native Windows setups like Code::Blocks. The containerized environment, combined with WSL2 and graphics forwarding, adds overhead that can - and likely will - impact responsiveness and frame rates.
 
 ---
 ### 👨‍💻 Why Not Just Use Code::Blocks?

@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build active file",
+      "label": "Build active file only",
       "type": "shell",
       "command": "g++",
       "args": [
@@ -10,6 +10,7 @@
         "-I/usr/local/include",
         "-I${workspaceFolder}/raylib/src",
         "-I${workspaceFolder}/MCIGraph_lib",
+        "-I${workspaceFolder}/MCIGraph_lib-main",
         "-std=c++17",
         "${file}",
         "-o",
@@ -31,9 +32,29 @@
       ],
       "group": {
         "kind": "build",
+        "isDefault": false
+      },
+      "detail": "Compile only the active file into workspace-level build folder"
+    },
+    {
+      "label": "Build all .cpp files in same folder",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "-c",
+        "mkdir -p ${workspaceFolder}/build && g++ -DRAYLIB_STATIC -I/usr/local/include -I${workspaceFolder}/raylib/src -I${workspaceFolder}/MCIGraph_lib -I${workspaceFolder}/MCIGraph_lib-main -std=c++17 *.cpp -o ${workspaceFolder}/build/${fileBasenameNoExtension}.out -L/usr/local/lib -lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
         "isDefault": true
       },
-      "detail": "Build active file and output binary to build folder"
+      "detail": "Compile all .cpp files in current folder into workspace-level build folder"
     }
   ]
 }
