@@ -20,7 +20,10 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "logging": {
+        "engineLogging": true
+      },
     },
     {
       "name": "Run folder build",
@@ -41,7 +44,10 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "logging": {
+        "engineLogging": true
+      },
     }
   ]
 }

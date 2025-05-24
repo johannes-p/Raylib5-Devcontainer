@@ -6,6 +6,7 @@
       "type": "shell",
       "command": "g++",
       "args": [
+        "-g",
         "-DRAYLIB_STATIC",
         "-I/usr/local/include",
         "-I${workspaceFolder}/raylib/src",
@@ -42,7 +43,7 @@
       "command": "sh",
       "args": [
         "-c",
-        "mkdir -p ${workspaceFolder}/build && g++ -DRAYLIB_STATIC -I/usr/local/include -I${workspaceFolder}/raylib/src -I${workspaceFolder}/MCIGraph_lib -I${workspaceFolder}/MCIGraph_lib-main -std=c++17 *.cpp -o ${workspaceFolder}/build/${fileBasenameNoExtension}.out -L/usr/local/lib -lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
+        "mkdir -p ${workspaceFolder}/build && g++ -g -DRAYLIB_STATIC -I/usr/local/include -I${workspaceFolder}/raylib/src -I${workspaceFolder}/MCIGraph_lib -I${workspaceFolder}/MCIGraph_lib-main -std=c++17 *.cpp -o ${workspaceFolder}/build/${fileBasenameNoExtension}.out -L/usr/local/lib -lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
       ],
       "options": {
         "cwd": "${fileDirname}"

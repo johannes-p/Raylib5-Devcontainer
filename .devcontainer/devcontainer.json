@@ -26,5 +26,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "sudo apt update && sudo apt install -y build-essential git && sudo apt install -y libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev && rm -rf raylib && git clone https://github.com/raysan5/raylib.git raylib && cd raylib && git checkout tags/5.0 -b raylib-5.0 && cd src/ && make PLATFORM=PLATFORM_DESKTOP && sudo make install"
+	"postCreateCommand": "sudo apt update && sudo apt install -y build-essential git && sudo apt install -y libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev && rm -rf raylib && git clone https://github.com/raysan5/raylib.git raylib && cd raylib && git checkout tags/5.0 -b raylib-5.0 && cd src/ && make PLATFORM=PLATFORM_DESKTOP && sudo make install",
+	"postStartCommand": "/usr/local/bin/banner.sh"
 }
