@@ -5,16 +5,16 @@
       "-c",
       "-DRAYLIB_STATIC",
       "-I/usr/local/include",
-      "-I/workspaces/cpp/raylib/src",
-      "-I/workspaces/cpp/MCIGraph_lib",
-      "-I/workspaces/cpp/MCIGraph_lib-main",
+      "-I/workspaces/Raylib5-Devcontainer/raylib/src",
+      "-I/workspaces/Raylib5-Devcontainer/MCIGraph_lib",
+      "-I/workspaces/Raylib5-Devcontainer/MCIGraph_lib-main",
       "-std=c++17",
-      "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.cpp",
+      "/workspaces/Raylib5-Devcontainer/MCIGraph_lib-main/mandelbrot.cpp",
       "-o",
-      "/workspaces/cpp/build/mandelbrot.out"
+      "/workspaces/Raylib5-Devcontainer/build/mandelbrot.out"
     ],
-    "directory": "/workspaces/cpp",
-    "file": "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.cpp",
-    "output": "/workspaces/cpp/MCIGraph_lib-main/mandelbrot.o"
+    "directory": "/workspaces/Raylib5-Devcontainer",
+    "file": "/workspaces/Raylib5-Devcontainer/MCIGraph_lib-main/mandelbrot.cpp",
+    "output": "/workspaces/Raylib5-Devcontainer/MCIGraph_lib-main/mandelbrot.o"
   }
 ]
